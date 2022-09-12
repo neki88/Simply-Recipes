@@ -256,7 +256,161 @@ ul {
 
 /*
 =============== 
-Navbar
+START OF MINE
 ===============
 */
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.grid-container {
+  /*min-height: 100vh;*/
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  grid-template-areas: 
+    "g-nav"
+    "g-header"
+    "g-aside"
+    "g-main"
+    "g-footer"
+  ;
+}
+
+nav {
+  grid-area: g-nav;
+  background-color: #645cff;
+}
+header {
+  grid-area: g-header;
+  background-color: #d4c81f;
+}
+main {
+  grid-area: g-main;
+  background-color: #cd20d3;
+}
+aside {
+  grid-area: g-aside;
+  background-color: #9e919e;
+}
+footer {
+  grid-area: g-footer;
+  background-color: #490db8;
+}
+
+.img-krati img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/*
+=============== 
+Nav
+===============
+*/
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav h1 {
+  margin-bottom: 0;
+}
+
+.nav ul li {
+  margin: 5px;
+}
+
+/*
+=============== 
+Header
+===============
+*/
+
+.header{
+  text-align: center;
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+
+footer{
+  text-align: center;
+}
+
+/*
+=============== 
+MEDIA QUERY
+===============
+*/
+
+@media (min-width: 768px){
+  .grid-container{
+    grid-template-columns: repeat(4, minmax(150px, auto));
+    grid-template-rows: repeat(5, minmax(200px, auto));
+    grid-template-areas: 
+      "g-nav g-nav g-nav g-nav"
+      "g-header g-header g-header g-header"
+      "g-aside g-main g-main g-main"
+      "g-aside g-main g-main g-main"
+      "g-footer g-footer g-footer g-footer"
+    ;
+  }
+
+
+  /*
+=============== 
+Nav
+===============
+*/
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: aquamarine;
+}
+.nav-right {
+  background-color: #0f5132;
+}
+
+.nav-left ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
+}
+
+}
+
+@media (min-width: 1320px) {
+  .nav-left {
+    
+    flex-direction: row;
+    justify-content: space-between;
+   
+  }
+}
