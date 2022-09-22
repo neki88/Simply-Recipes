@@ -310,15 +310,26 @@ Nav
 
 .nav-div {
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 6rem;
 }
 
 .nav-right{
   text-align: center;
+  width: 100%;
   display: none;
+
 }
 
+.nav-right ul a{
+  display: block;
+  color: var(--grey-900);
+  letter-spacing: var(--letterSpacing);
+  border-top: 1px solid var(--grey-500);
+  transition: var(--transition);
+}
+/*zasto u mobilnoj verziji nema visinu*/
 .nav-left {
   display: flex;
   justify-content: space-between;
@@ -332,6 +343,7 @@ Nav
 .logo-img {
   display: inline-block;
   vertical-align: middle;
+  width: 200px;
 }
 
 
@@ -367,7 +379,7 @@ Main
 
 .card {
   padding: 10px;
-  flex: 1 50%;
+  
 }
 
 .main-div img {
@@ -459,6 +471,7 @@ Q Nav
 .nav-left {
   margin-right: 30px;
   width: auto;
+  
 }
 
 .nav-right {
@@ -473,6 +486,10 @@ Q Nav
   justify-content: space-between;
   width: 260px;
   
+}
+
+.nav-right ul a {
+  border-top: 0;
 }
   /*
 =============== 
